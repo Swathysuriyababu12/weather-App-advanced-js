@@ -1,4 +1,4 @@
-const apiKey = "d71c12badebcf6f8ee50ee5ad22bbbf4"; // Replace with your actual API key
+//const apiKey = "d71c12badebcf6f8ee50ee5ad22bbbf4"; // Replace with your actual API key
 const searchButton = document.getElementById('searchButton');
 const cityInput = document.getElementById('cityInput');
 const cityNameElement = document.getElementById('cityName');
@@ -15,7 +15,7 @@ searchButton.addEventListener('click', () => {
 
 async function getWeatherData(cityName) {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.api}&units=metric`);
         const data = await response.json();
         
         cityNameElement.textContent = data.name;

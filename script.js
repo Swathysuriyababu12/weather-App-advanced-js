@@ -1,4 +1,5 @@
-const apiKey = "d71c12badebcf6f8ee50ee5ad22bbbf4"; // Replace with your actual API key
+//const apiKey = "d71c12badebcf6f8ee50ee5ad22bbbf4"; // Replace with your actual API key
+import apiKey from "./apikey.js"
 const searchButton = document.getElementById('searchButton');
 const cityInput = document.getElementById('cityInput');
 const cityNameElement = document.getElementById('cityName');
